@@ -1,0 +1,7 @@
+node_modules/
+.env
+.env.*
+*.log
+firebase_config.js
+s3_config.json
+backup.js
