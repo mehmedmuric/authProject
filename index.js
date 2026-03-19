@@ -1,12 +1,12 @@
-// const express = require('express');
+const express = require('express');
 
-// const app = express();
-// app.use(express.json());
+const app = express();
+app.use(express.json());
 
-// app.get("/", (req, res) => {
-//     res.json({message: "Hello from server!"});
-// })
+app.get("/", (req, res) => {
+    res.json({message: "Hello from server!"});
+})
 
-// app.listen(process.env.PORT, () => {
-//     console.log(`Server is running on port ${process.env.PORT}`);
-// })
+app.listen(process.env.PORT, () => {
+    console.log(`Server is running on port ${process.env.PORT}`);
+})
