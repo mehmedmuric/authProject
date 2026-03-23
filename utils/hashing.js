@@ -1,3 +1,7 @@
+const { hash, compare } = require("bcrypt");
+const { createHmac } = require("crypto");
+
+
 exports.mdoHash = (value, saltValue) => {
     const result = hash(value, saltValue);
     return result;
@@ -6,4 +10,9 @@ exports.mdoHash = (value, saltValue) => {
 exports.doHashValidation = (value, hashedValue) => {
     const result = compare(value, hashedValue);
     return result;
-}
+};
+
+exports.hmacProccess = (value, key) => {
+    const result = createHmac("sha256", key).update(value).digest("hex");
+    return result;
+};
